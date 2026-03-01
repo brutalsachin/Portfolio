@@ -10,7 +10,7 @@ const data = {
   email: "2k23.csai2310567@gmail.com",
   phone: "6386835013",
   linkedin: "https://linkedin.com/in/sachin-yadav-007814270",
-  github: "https://github.com/sachinyadav",
+  github: "https://github.com/brutalsachin",
 
   stack: [
     { name: "Java", icon: "☕" },
@@ -56,7 +56,7 @@ const data = {
       badge: "MAJOR PROJECT",
       color: "#00d4ff",
       year: "2026",
-      repo: "https://github.com/sachinyadav/secure-digital-twin",
+      repo: "https://github.com/brutalsachin/frontend_twin",
       demo: ""
     },
     {
@@ -66,7 +66,7 @@ const data = {
       tags: ["JAVA", "NLP", "ML", "SPRING BOOT", "API"],
       badge: "AI PROJECT",
       color: "#a855f7",
-      year: "2025",
+      year: "2026",
       repo: "https://github.com/sachinyadav/nlp-ml-spring",
       demo: ""
     },
@@ -78,7 +78,7 @@ const data = {
       badge: "DEPLOYED",
       color: "#00d4ff",
       year: "2025",
-      repo: "https://github.com/sachinyadav/quiz-app",
+      repo: "https://github.com/brutalsachin/spring-boot-quiz",
       demo: "https://quiz-app-live-url.com"
     },
     {
@@ -100,7 +100,7 @@ const data = {
       badge: "",
       color: "#00d4ff",
       year: "2025",
-      repo: "https://github.com/sachinyadav/portfolio",
+      repo: "https://github.com/brutalsachin/Portfolio",
       demo: "https://your-portfolio-live-url.com"
     }
   ],
@@ -340,11 +340,28 @@ export default function Portfolio() {
 
   const handleSend = async (e) => {
     e.preventDefault();
-    // Uncomment when Spring Boot is ready:
-    // await fetch("http://localhost:8080/api/contact", { method: "POST", headers: {"Content-Type":"application/json"}, body: JSON.stringify(form) });
-    setSent(true);
-    setForm({ name: "", email: "", subject: "", message: "" });
-    setTimeout(() => setSent(false), 3000);
+    // Using Formspree to send emails without a backend. 
+    // Note: You need to replace 'your_formspree_id' with your actual Formspree ID.
+    // Get one at https://formspree.io/ for free.
+    const formspreeId = "xreavpak";
+
+    try {
+      const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form)
+      });
+
+      if (response.ok) {
+        setSent(true);
+        setForm({ name: "", email: "", subject: "", message: "" });
+        setTimeout(() => setSent(false), 3000);
+      } else {
+        console.error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
   };
 
   const filters = ["All", "Hardware", "AR/Sensors", "Research", "Backend"];
