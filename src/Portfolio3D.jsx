@@ -67,7 +67,7 @@ const data = {
       badge: "AI PROJECT",
       color: "#a855f7",
       year: "2026",
-      repo: "https://github.com/sachinyadav/nlp-ml-spring",
+      repo: "https://github.com/brutalsachin/ml-agent-platform",
       demo: ""
     },
     {
@@ -79,7 +79,7 @@ const data = {
       color: "#00d4ff",
       year: "2025",
       repo: "https://github.com/brutalsachin/spring-boot-quiz",
-      demo: "https://quiz-app-live-url.com"
+      demo: ""
     },
     {
       title: "AR Indoor Navigation System",
@@ -101,7 +101,7 @@ const data = {
       color: "#00d4ff",
       year: "2025",
       repo: "https://github.com/brutalsachin/Portfolio",
-      demo: "https://your-portfolio-live-url.com"
+      demo: "https://yadavsachin.vercel.app"
     }
   ],
 
@@ -585,7 +585,7 @@ export default function Portfolio() {
 
       {/* FOOTER */}
       <footer style={{ borderTop: "1px solid rgba(255,255,255,0.06)", padding: "28px 48px", display: "flex", justifyContent: "space-between", alignItems: "center", position: "relative", zIndex: 1 }}>
-        <span style={{ color: "#8899aa", fontSize: 12 }}>&lt;/&gt; Sachin Yadav · PSIT Kanpur · © 2025</span>
+        <span style={{ color: "#8899aa", fontSize: 12 }}>&lt;/&gt; Sachin Yadav · PSIT Kanpur · © 2026</span>
         <div style={{ display: "flex", gap: 28 }}>
           <a href={data.github} target="_blank" rel="noreferrer" style={{ color: "#8899aa", textDecoration: "none", fontSize: 13 }}>GitHub</a>
           <a href={data.linkedin} target="_blank" rel="noreferrer" style={{ color: "#8899aa", textDecoration: "none", fontSize: 13 }}>LinkedIn</a>
